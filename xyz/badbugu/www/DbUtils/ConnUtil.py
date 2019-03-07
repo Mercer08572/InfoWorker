@@ -12,7 +12,7 @@ import pymysql
 class ConnUtil:
 
     """数据库获取连接，关闭接连相关操作（目前只针对mysql数据）"""
-    def _get_curson(self):
+    def get_curson(self):
 
         # 读取配置文件connectionInfo.ini
 

@@ -72,7 +72,7 @@ def readCsv():
                           "'{source}'," \
                           "'{insert_date}'," \
                           "'{insert_year}'," \
-                          "'{insert_month}')".format(user_id=strFormat(list[0]),user_name=strFormat(list[1]),sex=strFormat(list[2]),user_phone=strFormat(list[3]),user_email=strFormat(list[4]),card_no=strFormat(list[5]),address1=strFormat(list[6]),address2=strFormat(list[7]),account_name=strFormat(list[8]),bank_account=strFormat(list[9]),lhhcode=strFormat(list[10]),c_account_addr=strFormat(list[11]),user_bankadd=strFormat(list[12]),recBranchName=strFormat(list[13]),recBranchProvince=strFormat(list[14]),recBranchCity=strFormat(list[15]),c_manager_name=strFormat(list[16]),source='',insert_date='',insert_year='',insert_month='') ;
+                          "'{insert_month}')".format(user_id=__strFormat(list[0]),user_name=__strFormat(list[1]),sex=__strFormat(list[2]),user_phone=__strFormat(list[3]),user_email=__strFormat(list[4]),card_no=__strFormat(list[5]),address1=__strFormat(list[6]),address2=__strFormat(list[7]),account_name=__strFormat(list[8]),bank_account=__strFormat(list[9]),lhhcode=__strFormat(list[10]),c_account_addr=__strFormat(list[11]),user_bankadd=__strFormat(list[12]),recBranchName=__strFormat(list[13]),recBranchProvince=__strFormat(list[14]),recBranchCity=__strFormat(list[15]),c_manager_name=__strFormat(list[16]),source='',insert_date='',insert_year='',insert_month='') ;
             # print(list)
             # print(sqlTemplate);
 
@@ -86,7 +86,7 @@ def readCsv():
     return;
 
 # 将导出文件中的双引号去除
-def strFormat(str):
+def __strFormat(str):
     str = str[1:-1];
     return str;
 

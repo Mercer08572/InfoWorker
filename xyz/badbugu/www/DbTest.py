@@ -9,8 +9,8 @@ import pymysql
 
 # try:
 #     # 获取数据库连接，设置编码为utf-8
-#     conn = pymysql.connect(host='104.238.149.206', user='Collector', passwd='dafxsmwZYGF4GkZw', db='Social_Library',
-#                            port=3306, charset='utf8');
+#     conn = pymysql.connect(host='xxx.xxx.xxx.xxx', user='Collector', passwd='xxx', db='Social_Library',
+#                            port=xxx, charset='utf8');
 #     cur = conn.cursor(); # 获取一个游标
 #     cur.execute('select * from Collection_User')
 #     data = cur.fetchall()
