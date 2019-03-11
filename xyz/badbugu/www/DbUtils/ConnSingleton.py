@@ -53,17 +53,19 @@ class ConnSingleton:
     #     self._connEntity.charset = config.get("mysqlDB", "charset");  # 获取编码
 
     def __init__(self):
-        self.openConnect();
+        self.__openConnect();
 
     def get_conn(self):
-        conn = self.openConnect();
+        conn = self.__openConnect();
         return conn;
 
+    '''
     def get_cursor(self):
-        conn = self.openConnect();
+        conn = self.__openConnect();
         return conn.cursor();
+    '''
 
-    def openConnect(self):
+    def __openConnect(self):
         """打开连接connection返回游标cursor"""
 
         if self._connection is not None:
@@ -83,6 +85,14 @@ class ConnSingleton:
 
         return self._connection;
 
+    '''
     def close_cursor(self):
         self._cursor.close();
         # self._connection.close();
+        return
+    '''
+
+    def close_conn(self):
+        self._cursor.close();
+        self._connection.close();
+        return;

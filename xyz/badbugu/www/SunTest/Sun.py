@@ -5,24 +5,24 @@
 # file : Sun
 
 class Sun:
-    __temp = "Hello";
+    __temp = "Hello"
 
     def __init__(self):
-        print("1234");
+        print("1234")
         return
 
     def Hi(self):
-        print("HI");
+        print("HI")
         return
 
     @staticmethod
     def NiHao():
-        print("你好");
+        print("你好")
         return
 
 
 if __name__ == "__main__":
-    sun = Sun();
-    sun.Hi();
+    sun = Sun()
+    sun.Hi()
 
-    Sun.NiHao();
+    Sun.NiHao()

@@ -16,7 +16,15 @@ def readCsv():
     # print('\n');
     # userInfo.close();
 
-    with open('../../../CsvLibrary/生活家用户信息.csv',mode='r',encoding='UTF-8') as csv:
+    abspath = os.path.abspath('');
+    # abspath = os.path.join(abspath,"\\CsvLibrary\\生活家用户信息.csv");
+    csvPath = os.path.join(abspath,"CsvLibrary/生活家用户信息.csv");  # csv文件存储的位置
+    sqlFolderPath = os.path.join(abspath, "sqlLibrary");
+    print(abspath);
+    print(csvPath);
+    print(sqlFolderPath);
+
+    with open(csvPath,mode='r',encoding='UTF-8') as csv:
         line = csv.readline();
         line = line[:-2];        # 去除每一行末尾的换行符
 
@@ -90,18 +98,7 @@ def __strFormat(str):
     str = str[1:-1];
     return str;
 
-#  连接数据库
-def __connDB():
-
-    return;
-
-#  批量执行SQL
-def __momeSqlExec(sqlList):
-
-    return;
-
 
 
 if __name__ == '__main__':
     readCsv();
-

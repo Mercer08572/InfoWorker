@@ -19,6 +19,8 @@ class ConnUtil:
         connectInfo_path = os.path.abspath("..");
         connectInfo_path = os.path.join(connectInfo_path,"resources\\connectionInfo.ini");
 
+        print(connectInfo_path);
+
         config = configparser.ConfigParser();
         config.read(connectInfo_path);
 
@@ -42,3 +44,6 @@ class ConnUtil:
 
         return cursor;
 
+if __name__ == "__main__":
+    abc = ConnUtil();
+    abc.get_curson();
